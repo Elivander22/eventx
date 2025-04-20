@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <main class="container">
+    <h1>Entre em Contato</h1>
+    <p>Preencha o formulário abaixo e entraremos em contato.</p>
+
+    <form id="formContato">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+       <br>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" required></textarea>
+      <br>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div class="mensagem-sucesso" id="mensagemSucesso">
+      ✅ Mensagem enviada com sucesso!
+    </div>
+  </main>
+
+  <script>
+    const form = document.getElementById('formContato');
+    const mensagem = document.getElementById('mensagemSucesso');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      mensagem.style.display = 'block';
+      form.reset();
+      setTimeout(() => {
+        mensagem.style.display = 'none';
+      }, 4000);
+    });
+  </script>
+</body>
+</html>
