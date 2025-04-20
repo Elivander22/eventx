@@ -1,50 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contato</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a equipe do EventX.">
+    <title>Contato</title>
+    <link rel="stylesheet" href="assets/css/app.css">
 </head>
 <body>
 
-  <main class="container">
-    <h1>Entre em Contato</h1>
-    <p>Preencha o formulário abaixo e entraremos em contato.</p>
+    <div id="header"></div>
 
-    <form id="formContato">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
-       <br>
+    <main class="container">
+        <h2>Fale Conosco</h2>
+        <form class="form-evento">
+            <label for="nome">Seu nome:</label>
+            <input type="text" id="nome" name="nome" required>
 
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email" required>
-      <br>
+            <label for="email">Seu e-mail:</label>
+            <input type="email" id="email" name="email" required>
 
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" required></textarea>
-      <br>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
 
-      <button type="submit">Enviar</button>
-    </form>
+            <button type="submit" class="cta-button">Enviar Mensagem</button>
+        </form>
+    </main>
 
-    <div class="mensagem-sucesso" id="mensagemSucesso">
-      ✅ Mensagem enviada com sucesso!
-    </div>
-  </main>
+    <div id="footer"></div>
 
-  <script>
-    const form = document.getElementById('formContato');
-    const mensagem = document.getElementById('mensagemSucesso');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      mensagem.style.display = 'block';
-      form.reset();
-      setTimeout(() => {
-        mensagem.style.display = 'none';
-      }, 4000);
-    });
-  </script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
