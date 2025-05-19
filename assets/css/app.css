@@ -1,127 +1,308 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Corpo do site */
+/* Corpo da página */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-/* Cabeçalho */
-header {
-    background-color: #333;
-    padding: 10px 0;
-    text-align: center;
-}
-
-header nav ul {
-    list-style-type: none;
-}
-
-header nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-header nav ul li a:hover {
-    color: #f39c12;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
 }
 
 /* Container principal */
 .container {
-    padding: 30px;
-    text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Seção principal */
+.hero {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #FFD700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 /* Imagem de destaque */
-.featured-image {
-    width: 80%;
-    max-width: 600px;
-    height: auto;
-    margin: 20px auto;
-    border-radius: 10px;
+.hero-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  margin-bottom: 2rem;
+}
+
+/* Navegação */
+.main-nav a {
+  display: inline-block;
+  margin: 0.5rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff9800;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.main-nav a:hover {
+  background-color: #e68900;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .main-nav a {
     display: block;
+    margin: 0.5rem auto;
+  }
 }
 
-/* Botões */
-.cta-button {
-    display: inline-block;
-    background-color: #f39c12;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+/* Tabela de eventos */
+.eventos {
+  margin-top: 2rem;
+  text-align: center;
 }
 
-.cta-button:hover {
-    background-color: #e67e22;
+.eventos h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #FFD700;
 }
 
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
+.event-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Estilo para formulário */
-.form-evento {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.event-table th,
+.event-table td {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
 }
 
-.form-evento label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
-    text-align: left;
+.event-table th {
+  background-color: #2a5298;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9rem;
 }
 
-.form-evento input,
-.form-evento textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.event-table tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
-.form-evento textarea {
-    resize: vertical;
-    height: 100px;
+.event-table tr:hover {
+  background-color: #f1f1f1;
 }
 
-.event-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+/* Contato */
+.contato {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  color: #333;
 }
 
-.event-card {
-    background-color: #fff;
-    padding: 20px;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: left;
+.contato h1 {
+  font-size: 2rem;
+  color: #2a5298;
+  margin-bottom: 1rem;
 }
+
+.contato p {
+  margin-bottom: 1.5rem;
+}
+
+.form-contato label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.form-contato textarea {
+  height: 120px;
+}
+
+.form-contato button {
+  margin-top: 1.5rem;
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-contato button:hover {
+  background-color: #e68900;
+}
+
+.mensagem-sucesso {
+  margin-top: 1rem;
+  color: green;
+  font-weight: bold;
+  display: none;
+  text-align: center;
+}
+
+/* Página Sobre */
+.sobre {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.08);
+  color: #333;
+}
+
+.sobre h1 {
+  font-size: 2.2rem;
+  color: #2a5298;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.sobre h2 {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  color: #444;
+  border-left: 4px solid #ff9800;
+  padding-left: 10px;
+}
+
+.sobre p {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.sobre a {
+  color: #2a5298;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.sobre a:hover {
+  color: #ff9800;
+}
+
+.sobre-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 1rem 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Página de Cadastro */
+.cadastro-evento {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #f8f8f8;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.08);
+}
+
+.cadastro-evento h1 {
+  font-size: 2rem;
+  color: #2a5298;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.cadastro-evento p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2a5298;
+}
+
+.form-cadastro label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.form-cadastro input,
+.form-cadastro textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+.form-cadastro textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.form-cadastro button {
+  margin-top: 1.5rem;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.form-cadastro button:hover {
+  background-color: #e68900;
+}
+
+.cadastro-img {
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+

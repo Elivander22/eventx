@@ -1,63 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cadastre seu evento no EventX.">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="assets/css/app.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cadastre seu evento no EventX." />
+  <title>Cadastro de Evento - EventX</title>
+  <link rel="stylesheet" href="assets/css/app.css" />
+
 </head>
 <body>
 
-    <div id="header"></div>
+  <div id="header"></div>
 
-    <main class="container">
-        <h2>Cadastre seu Evento</h2>
-        <form id="formCadastro" class="form-evento" method="POST">
-            <label for="nome">Nome do Evento:</label>
-            <input type="text" id="nome" name="nome" required>
+  <main class="container">
+    <section class="cadastro-evento">
+      <h1>📝 Cadastro de Evento</h1>
+      <p>Preencha os detalhes abaixo para cadastrar seu evento.</p>
 
-            <label for="data">Data:</label>
-            <input type="date" id="data" name="data" required>
+      <form id="formCadastro" method="POST" class="form-cadastro">
+        <label for="nome">Nome do Evento:</label>
+        <input type="text" id="nome" name="nome" required>
 
-            <label for="hora">Horário:</label>
-            <input type="time" id="hora" name="hora" required>
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required>
 
-            <label for="local">Local:</label>
-            <input type="text" id="local" name="local" required>
+        <label for="hora">Horário:</label>
+        <input type="time" id="hora" name="hora" required>
 
-            <label for="descricao">Descrição:</label>
-            <textarea id="descricao" name="descricao" required></textarea>
+        <label for="local">Local:</label>
+        <input type="text" id="local" name="local" required>
 
-            <button type="submit" class="cta-button">Cadastrar Evento</button>
-        </form>
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao" required></textarea>
 
-        <!-- Imagem ilustrativa -->
-        <img src="assets/img/istockphoto-997523832-1024x1024.jpg" alt="Evento em destaque" class="featured-image">
+        <button type="submit">Cadastrar Evento</button>
+      </form>
 
-    </main>
+      <img src="assets/img/istockphoto-997523832-1024x1024.jpg" alt="Evento em destaque" class="cadastro-img">
+    </section>
+  </main>
 
-    <div id="footer"></div>
+  <div id="footer"></div>
 
-    <script src="assets/js/script.js"></script>
-    <script>
-        document.getElementById("formCadastro").addEventListener("submit", function(event) {
-            event.preventDefault();  
-            const nome = document.getElementById("nome").value;
-            const data = document.getElementById("data").value;
-            const hora = document.getElementById("hora").value;
-            const local = document.getElementById("local").value;
-            const descricao = document.getElementById("descricao").value;
+  <script src="assets/js/script.js"></script>
+  <script>
+    document.getElementById("formCadastro").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const nome = document.getElementById("nome").value;
+      const data = document.getElementById("data").value;
+      const hora = document.getElementById("hora").value;
+      const local = document.getElementById("local").value;
+      const descricao = document.getElementById("descricao").value;
 
-            console.log(`Evento: ${nome}`);
-            console.log(`Data: ${data}`);
-            console.log(`Hora: ${hora}`);
-            console.log(`Local: ${local}`);
-            console.log(`Descrição: ${descricao}`);
+      console.log(`Evento: ${nome}`);
+      console.log(`Data: ${data}`);
+      console.log(`Hora: ${hora}`);
+      console.log(`Local: ${local}`);
+      console.log(`Descrição: ${descricao}`);
 
-            document.getElementById("formCadastro").reset();
-            alert("Evento cadastrado com sucesso!");
-        });
-    </script>
+      document.getElementById("formCadastro").reset();
+      alert("✅ Evento cadastrado com sucesso!");
+    });
+  </script>
 </body>
 </html>
