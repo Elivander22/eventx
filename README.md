@@ -38,8 +38,15 @@ O projeto é composto por arquivos HTML, CSS e JavaScript:
 
 ## 🖼️ Capturas de Tela
 
-*Adicione aqui prints ou gifs demonstrando a interface do EventX.*  
-(Exemplo: `./assets/img/home.png`)
+### Página Inicial
+![Página Inicial](./assets/img/home.png)
+
+### Lista de Eventos
+![Lista de Eventos](./assets/img/lista-eventos.png)
+
+### Formulário de Cadastro
+![Formulário de Cadastro](./assets/img/cadastro.png)
+
 
 ---
 
